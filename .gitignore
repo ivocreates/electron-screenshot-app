@@ -1,0 +1,42 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+/dist/
+/out/
+/build/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Settings & configs
+.env
+.settings.json
+
+# VSCode settings
+.vscode/
+
+# Screenshots & temp files
+/screenshots/
+/*.zip
+
+# Electron Forge/Builder generated
+*.tgz
+*.dmg
+*.exe
+*.app
+*.AppImage
+
+# macOS app builds
+electron-screenshot-app-darwin-*
+electron-screenshot-app-win32-*
+electron-screenshot-app-linux-*
+
+# Windows installer cache
+__installer-cache__/

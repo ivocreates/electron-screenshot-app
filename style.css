@@ -1,0 +1,80 @@
+/* Base Styling */
+body {
+  transition: all 0.3s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dark Mode Enhancements */
+.bg-dark {
+  background-color: #121212 !important;
+}
+
+.text-light {
+  color: #f1f1f1 !important;
+}
+
+.bg-dark .btn,
+.bg-dark .form-control,
+.bg-dark .form-select {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+.bg-dark .btn:hover {
+  background-color: #333;
+  border-color: #555;
+}
+
+.bg-dark .form-control::placeholder {
+  color: #888;
+}
+
+/* Image Styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons & Inputs */
+button {
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+input[type="number"],
+select.form-select {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus,
+select.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Countdown Timer */
+#countdown {
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.bg-dark footer {
+  border-color: #333;
+  color: #aaa;
+}

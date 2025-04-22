@@ -1,0 +1,56 @@
+{
+  "name": "electron-screenshot-app",
+  "version": "1.0.0",
+  "description": "A cross-platform Electron screenshot app with interval capture, export, and tray support.",
+  "author": "Ivo Pereira",
+  "homepage": "https://ivocreates.site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivocreates/screenshot-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ivocreates/screenshot-app/issues"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder",
+    "dist": "electron-builder --win"
+  },
+  "keywords": [
+    "electron",
+    "screenshot",
+    "desktop",
+    "tray",
+    "interval",
+    "capture"
+  ],
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "bootstrap": "^5.3.3",
+    "screenshot-desktop": "^1.15.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.13.3",
+    "electron": "^29.0.0"
+  },
+  "build": {
+    "appId": "com.ivocreates.screenshotapp",
+    "productName": "Screenshot App",
+    "copyright": "Copyright © 2025 Ivo Pereira",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
