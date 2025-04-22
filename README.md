@@ -1,90 +1,117 @@
-🖼️ Electron Screenshot App
-A lightweight and cross-platform desktop app built with Electron that captures desktop screenshots at custom intervals, supports folder selection, countdown display, dark mode toggle, and export of screenshots as a ZIP archive.
+# 🖼️ Electron Screenshot App
 
-🚀 Features
-📸 Take automatic screenshots at custom intervals (minutes & seconds)
+A lightweight, cross-platform desktop application built with **ElectronJS** that automatically captures your screen at custom intervals. Featuring a clean UI, folder selection, countdown display, dark mode, and ZIP export functionality — all packed into a sleek tray-based tool.
 
-⏹️ Auto stop after a defined duration (optional)
+---
 
-🌗 Light/Dark mode toggle
+## 🚀 Features
 
-📁 Choose screenshot save folder
+✅ **Automatic Screenshots**
+- Custom interval: minutes and seconds
+- Optional screenshot capture limit
 
-🧾 Export all screenshots as a ZIP
+✅ **User Experience**
+- Minimize to tray on startup
+- Full tray menu: show window, start, stop, open folder, zip, quit
+- System notifications with optional camera sound
+- Dark/light mode toggle
 
-🖼️ View recent screenshot previews in-app
+✅ **Storage & Export**
+- Select any save folder
+- Saves with timestamped filenames
+- Export all captured screenshots as a ZIP archive
 
-🔔 System notifications for actions
+✅ **Display & Feedback**
+- Live countdown timer
+- Preview latest screenshots
+- Sound toggle (📸 snap effect)
 
-🛑 Minimize to tray with full tray menu support
+✅ **Developer Friendly**
+- Persistent settings (`settings.json`)
+- Fully open-source
+- Cross-platform (Windows-ready, macOS-compatible)
+- Packaged with electron-builder
 
-🧠 Settings persistence
+---
 
-🪟 Fully packaged for Windows
-
-📂 Folder Structure
+## 📁 Folder Structure
 electron-screenshot-app/
-├── assets/
-│   └── icon.png              # App icon used in window and tray
-├── screenshots/              # Folder where screenshots are saved (default)
-├── index.html                # UI layout (Bootstrap-based)
-├── style.css                 # Custom styles
-├── main.js                   # Main Electron process
-├── preload.js                # Preload script for secure communication
-├── renderer.js               # Renderer process JS for UI logic
-├── settings.json             # Saved user settings (auto-created)
-├── package.json              # Project config and scripts
-└── .gitignore                # Ignored files for version control
+├── assets/                 # App icons, sounds, etc.
+│   └── icon.png
+├── screenshots/            # Captured screenshots
+├── index.html              # UI markup (Bootstrap 5)
+├── style.css               # Optional custom styles
+├── main.js                 # Electron main process
+├── preload.js              # Context bridge for IPC
+├── renderer.js             # Frontend logic
+├── settings.json           # User preferences
+├── package.json            # Project config & metadata
+└── .gitignore
 
 🛠️ Setup Instructions
-1. Clone the repository
 
+1. Clone the repository
 git clone https://github.com/ivocreates/electron-screenshot-app.git
 cd electron-screenshot-app
 
-2. Install dependencies
+3. Install dependencies
 npm install
 
-3. Start in development
+5. Start in development
 npm start
+
 
 🧪 Available Commands
 
 Command	Description
 npm start	Run app in development mode
-npm run pack	Package the app using electron-builder (creates installer)
-npm run make	Build the app (if using Electron Forge)
+npm run pack	Package app using electron-builder
+✅ Output files will be created in the dist/ folder.
 
 📦 Packaging for Windows
-This project supports electron-builder. Make sure electron is only in devDependencies.
+Make sure the following is true in package.json:
+
+electron and electron-builder are in devDependencies
+
+build field exists
+
+Then run:
 
 npm run pack
-The packaged .exe and installer will be created inside the dist/ folder.
+Your .exe installer will be inside dist/.
 
 🖱️ Usage Guide
-Launch the app (minimizes to tray by default)
+Launch the app (starts in tray by default)
 
-Choose screenshot interval in minutes & seconds
+Set interval in minutes & seconds
 
-Set optional auto-stop time (in minutes)
+(Optional) Set a capture limit
 
-Choose desired image format: PNG or JPG
+Choose format: PNG / JPG
 
-Choose a folder to save screenshots (or use default)
+Select a save folder
 
-Click Start to begin automatic captures
+Click Start — the app begins capturing screenshots
 
-View previews and countdown timer in the UI
+Watch live countdown, view recent previews
 
-Click Zip & Export to save all images as a ZIP
+Click Zip & Export to save all as a .zip
 
-Use tray menu to show/hide/start/stop/quit
+Use the tray menu to control the app
 
-🧑‍💻 Creator
-Ivo Pereira
-🔗 GitHub
-🌐 Portfolio
-💼 LinkedIn
+👤 Creator
+Made with Dedication by Ivo Pereira
+
+🔗 GitHub: github.com/ivocreates
+
+🌐 Portfolio: ivocreates.site
+
+💼 LinkedIn: linkedin.com/in/pereira-ivo
+
+✍️ Dev Blog: dev.to/ivocreates
+
+📰 Medium: medium.com/@ivocreates
 
 📝 License
-MIT License - Free to use and modify. Please credit the creator if shared publicly.
+MIT License — Feel free to use, modify, and share.
+Please credit the author if publishing publicly.
