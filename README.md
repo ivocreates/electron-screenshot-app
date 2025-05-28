@@ -35,18 +35,25 @@ A lightweight, cross-platform desktop application built with **ElectronJS** that
 ---
 
 ## 📁 Folder Structure
-electron-screenshot-app/
-├── assets/                 # App icons, sounds, etc.
-│   └── icon.png
-├── screenshots/            # Captured screenshots
-├── index.html              # UI markup (Bootstrap 5)
-├── style.css               # Optional custom styles
-├── main.js                 # Electron main process
-├── preload.js              # Context bridge for IPC
-├── renderer.js             # Frontend logic
-├── settings.json           # User preferences
-├── package.json            # Project config & metadata
-└── .gitignore
+electron-screenshot-application/
+├── .github/                  # GitHub specific files (workflows, templates)
+│   └── workflows/            # GitHub Actions workflows
+├── src/                      # Main application source code
+│   ├── main/                 # Main process code
+│   ├── renderer/             # Renderer process code
+│   ├── common/               # Shared code between processes
+│   └── assets/               # Static assets (images, icons, etc.)
+├── public/                   # Public assets (index.html, etc.)
+├── screenshots/              # Example screenshots (optional)
+├── annotations/              # Annotation files (if part of your app)
+├── user-data/                # User data storage (if part of your app)
+├── test/                     # Test files
+├── scripts/                  # Build scripts and utilities
+├── .gitignore                # Git ignore rules
+├── package.json              # Project configuration
+├── README.md                 # Project documentation
+├── LICENSE                   # License file
+└── tsconfig.json             # TypeScript config (if using TypeScript)
 
 🛠️ Setup Instructions
 
